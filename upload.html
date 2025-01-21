@@ -7,3 +7,12 @@
 </head>
 <body>
     <h1>Загрузить файл</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <input type="submit" value="Загрузить">
+    </form>
+    <a href="{{ url_for('uploaded_files') }}">Мои файлы</a><br>
+    <a href="{{ url_for('logout') }}">Выйти</a>
+</body>
+</html>
