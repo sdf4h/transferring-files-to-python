@@ -1,0 +1,25 @@
+<!-- templates/files.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои файлы</title>
+</head>
+<body>
+    <h1>Мои файлы</h1>
+    {% if files %}
+        <ul>
+        {% for file in files %}
+            <li>
+                {{ file.original_filename }} - 
+                <a href="{{ url_for('download_file', file_id=file.id) }}">Скачать</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>У вас еще нет загруженных файлов.</p>
+    {% endif %}
+    <a href="{{ url_for('upload_file') }}">Загрузить еще файл</a><br>
+    <a href="{{ url_for('logout') }}">Выйти</a>
+</body>
+</html>
