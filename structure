@@ -1,0 +1,8 @@
+_project/
+│
+├── app.py
+├── templates/
+│   ├── upload.html
+│   └── files.html
+├── uploads/
+└── requirements.txt
